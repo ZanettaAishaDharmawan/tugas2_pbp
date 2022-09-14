@@ -6,7 +6,7 @@ Berikut merupakan link dari pengerjaan tugas 2: https://tugas2-pbp-zanet.herokua
 
   ![djanggggggggggggo](https://user-images.githubusercontent.com/112609911/190220740-6e486da6-56a9-4cb9-b49a-971d4df68bda.jpg)
   
-    Bagan tersebut menjelaskan tentang bagaimana request oleh user atau client dijalankan. Pertama, user atau client akan mengirim request berupa akses ke urls.py. Lalu, request akan diterima oleh Django dan akan di ekstraksi argumennya, kemudian request akan dikirimkan ke URLs. URLs akan menerima request dan meneruskannya ke views.py. Setelah itu, views.py akan mencari template (html) yang tepat. Selain itu, views.py juga akan melakukan identifikasi model yang cocok dengan melakukan interaksi dengan database. Setelah menemukan template yang tepat, halaman website akan ditampilkan ke user. 
+  Bagan tersebut menjelaskan tentang bagaimana request oleh user atau client dijalankan. Pertama, user atau client akan mengirim request berupa akses ke urls.py. Lalu, request akan diterima oleh Django dan akan di ekstraksi argumennya, kemudian request akan dikirimkan ke URLs. URLs akan menerima request dan meneruskannya ke views.py. Setelah itu, views.py akan mencari template (html) yang tepat. Selain itu, views.py juga akan melakukan identifikasi model yang cocok dengan melakukan interaksi dengan database. Setelah menemukan template yang tepat, halaman website akan ditampilkan ke user. 
 
 2. Jelaskan kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
   
@@ -20,12 +20,12 @@ Berikut merupakan link dari pengerjaan tugas 2: https://tugas2-pbp-zanet.herokua
     
     b. Membuat sebuah routing untuk memetakan fungsi yang telah kamu buat pada views.py.
        
-       Pembuatan routing untuk memetakan fungsi pada views.py adalah dengan menambahkan urlspatterns berikut ke dalam urls.py di project_django.
+      Pembuatan routing untuk memetakan fungsi pada views.py adalah dengan menambahkan urlspatterns berikut ke dalam urls.py di project_django.
        path('katalog/', include('katalog.urls')), 
    
    c. Memetakan data yang didapatkan ke dalam HTML dengan sintaks dari Django untuk pemetaan data template.
        
-       Untuk memetakan nama dapat menggunakan sintaks {{nama}} dan untuk memetakan npm dapat menggunakan sintaks {{npm}}. Untuk memetakan list barang dapat menggunakan for barang in list_barang, dan memanggil yang perlu ditampilkan dengan sintaks seperti berikut,
+      Untuk memetakan nama dapat menggunakan sintaks {{nama}} dan untuk memetakan npm dapat menggunakan sintaks {{npm}}. Untuk memetakan list barang dapat menggunakan for barang in list_barang, dan memanggil yang perlu ditampilkan dengan sintaks seperti berikut,
         {% for barang in list_barang %}
             <tr>
                 <th>{{barang.item_name}}</th>
@@ -38,4 +38,4 @@ Berikut merupakan link dari pengerjaan tugas 2: https://tugas2-pbp-zanet.herokua
     
     d. Melakukan deployment ke Heroku terhadap aplikasi yang sudah kamu buat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
        
-       Melakukan deployment dapat dilakukan dengan membuat akun di Heroku terlebih dahulu. Setelah itu, buat aplikasi baru. Kemudian, masukan HEROKU_API_KEY (tersedia pada accounts settings Heroku) dan HEROKU_APP_NAME (nama aplikasi Heroku) ke dalam github repository > secrets -> action. Kemudian jalankan pilih opsi actions dan jalankan workflows.
+      Melakukan deployment dapat dilakukan dengan membuat akun di Heroku terlebih dahulu. Setelah itu, buat aplikasi baru. Kemudian, masukan HEROKU_API_KEY (tersedia pada accounts settings Heroku) dan HEROKU_APP_NAME (nama aplikasi Heroku) ke dalam github repository > secrets -> action. Kemudian jalankan pilih opsi actions dan jalankan workflows.
