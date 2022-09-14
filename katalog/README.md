@@ -3,6 +3,7 @@ Tugas 2
 Berikut merupakan link dari pengerjaan tugas 2: https://tugas2-pbp-zanet.herokuapp.com/katalog/ 
 
 1. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;
+
   ![djanggggggggggggo](https://user-images.githubusercontent.com/112609911/190220740-6e486da6-56a9-4cb9-b49a-971d4df68bda.jpg)
   
     Bagan tersebut menjelaskan tentang bagaimana request oleh user atau client dijalankan. Pertama, user atau client akan mengirim request berupa akses ke urls.py. Lalu, request akan diterima oleh Django dan akan di ekstraksi argumennya, kemudian request akan dikirimkan ke URLs. URLs akan menerima request dan meneruskannya ke views.py. Setelah itu, views.py akan mencari template (html) yang tepat. Selain itu, views.py juga akan melakukan identifikasi model yang cocok dengan melakukan interaksi dengan database. Setelah menemukan template yang tepat, halaman website akan ditampilkan ke user. 
