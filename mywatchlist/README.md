@@ -1,4 +1,7 @@
  # Tugas 3
+
+link heroku: https://tugas2-pbp-zanet.herokuapp.com/mywatchlist/html/
+ 
  ## Jelaskan perbedaan antara JSON, XML, dan HTML!
 **JSON (JavaScript Object Notation)** 
 
