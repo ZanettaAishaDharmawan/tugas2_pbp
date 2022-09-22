@@ -5,7 +5,7 @@
         "fields": {
             "watched": true,
             "title": "Flipped",
-            "rating": 7,
+            "rating": 4,
             "release_date": "6 Agustus 2010",
             "review": "At times, the movie feels like a commercial for Wonder Bread, stretched to feature length."
         }
@@ -16,7 +16,7 @@
         "fields": {
             "watched": true,
             "title": "Mamma Mia!",
-            "rating": 9,
+            "rating": 5,
             "release_date": "10 Juli 2008",
             "review": "It's impossible not to go along with the feeling when such a strangely life-affirming song as Dancing Queen is blasted in your ears."
         }
@@ -25,9 +25,9 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 3,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Ghostbusters",
-            "rating": 9,
+            "rating": 4,
             "release_date": "7 Juni 1984",
             "review": "Part of the sheer joy of this movie -- aside from the comic timing of Bill Murray -- is the cartoonish crapness of its apparitions and their placid acceptance by the Ghostbusters team."
         }
@@ -38,7 +38,7 @@
         "fields": {
             "watched": false,
             "title": "Ghostbusters II",
-            "rating": 9,
+            "rating": 3,
             "release_date": "16 Juni 1989",
             "review": "The sequel is, on the whole, a fairly mechanical spook show, filled with grinning ghosts that are definitely ghoulish but hardly menacing."
         }
@@ -47,9 +47,9 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 5,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Thor",
-            "rating": 8,
+            "rating": 4,
             "release_date": "3 November 2011",
             "review": "Thor is on much safer ground here on Earth. The tone is immediately different: more relaxed; comic, not cosmic."
         }
@@ -58,9 +58,9 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 6,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Thor: The Dark World",
-            "rating": 7,
+            "rating": 4,
             "release_date": "30 Oktober 2013",
             "review": "Comic-book superheroes have become so angst-ridden in recent years it's a relief to be around one who has hung on to his sense of humour."
         }
@@ -69,9 +69,9 @@
         "model": "mywatchlist.mywatchlistitem",
         "pk": 7,
         "fields": {
-            "watched": false,
+            "watched": true,
             "title": "Thor: Ragnarok",
-            "rating": 10,
+            "rating": 5,
             "release_date": "25 Oktober 2017",
             "review": "Beautifully filmed with serious kinetic energy by director Taika Waititi, with a crackling script, Thor: Ragnarok is a heap of fun. Cue 'Immigrant Song!'"
         }
@@ -82,7 +82,7 @@
         "fields": {
             "watched": false,
             "title": "Thor: Love and Thunder",
-            "rating": 9,
+            "rating": 4,
             "release_date": "6 Juli 2022",
             "review": "It brings up a lot of interesting ideas and ultimately does almost nothing with them."
         }
@@ -93,7 +93,7 @@
         "fields": {
             "watched": false,
             "title": "Free Guy",
-            "rating": 8,
+            "rating": 3,
             "release_date": "31 Oktober 2021",
             "review": "Free Guy is a very knowing movie, but part of its knowingness is its pop lightness -- even its blandness, if that can be seen as a virtue."
         }
@@ -104,7 +104,7 @@
         "fields": {
             "watched": false,
             "title": "The Adam Project",
-            "rating": 7,
+            "rating": 3,
             "release_date": "28 Februari 2022",
             "review": "A science fiction adventure with lots of humor."
         }
