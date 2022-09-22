@@ -43,10 +43,10 @@ Data delivery dibutuhkan agar data dapat terjadi pertukaran data user dengan dat
 ## Tampilan Postman
  
 ### HTML
-![html](https://user-images.githubusercontent.com/112609911/191590308-65e490a5-f59d-4489-87e9-30796a55cfae.jpg)
+![html2](https://user-images.githubusercontent.com/112609911/191646295-7c18eb75-df25-454c-8f1d-aa8de1456515.jpg)
 
 ### XML
-![xml](https://user-images.githubusercontent.com/112609911/191590278-98fecfa2-3072-4bbc-b306-5b465bd57819.jpg)
+![xml2](https://user-images.githubusercontent.com/112609911/191646311-dd3abd14-69cb-4613-9b04-d52280f55e6c.jpg)
 
 ### JSON
-![json](https://user-images.githubusercontent.com/112609911/191590290-fb3f72ed-168c-4809-a709-22be6bd3326c.jpg)
+![json2](https://user-images.githubusercontent.com/112609911/191646317-d489aadb-4d6d-4786-a302-11a6590550f8.jpg)
