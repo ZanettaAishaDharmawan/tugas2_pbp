@@ -1,0 +1,49 @@
+<div>
+    <div class="header">
+        <h1>Hello {{username}} !</h1>
+    </div>
+
+    <table border="1"
+            bgcolor="#d6eaf8">
+        <tr>
+          <th>Date</th>
+          <th>Task</th>
+          <th>Desctiption</th>
+          <th>Status</th>
+          <th>Change Status</th>
+          <th>Delete</th>
+          <th></th>
+        </tr>
+        {% comment %} Add the data below this line {% endcomment %}
+        {% for todo in list_todo %}
+        <tr>
+            <th>{{todo.date}}</th>
+            <th>{{todo.title}}</th>
+            <th>{{todo.description}}</th>
+            <th>
+              {% if todo.is_finished %}
+              Selesai
+              {% else %}
+              Belum Selesai
+              {% endif%}
+            </th>
+            <th>
+                <button><a href="{% url 'todolist:change-task' todo.id %}" title="">Change Status</a></button>
+            </th>
+            <th>
+                <style>
+                    .button {
+                        color:red;
+                    }
+                </style>
+                <a href="{% url 'todolist:delete-task' todo.id %}" title="" class="button">Delete</a>
+            </th>
+        </tr>
+        {% endfor %}
+      </table>
+    
+    <th>
+    <button onclick="location.href='/todolist/create-task'">Create New Task</button>
+    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </th>
+</div>
