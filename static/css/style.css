@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    background-color: white !important;
+}
+
+.global-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border: none;
+    padding: 10px;  
+}
+
+.card{
+    background-color: white;
+    box-shadow: 0.5cm;
+    box-shadow: 0 0 10px 0 rgba(145, 143, 143, 0.2); 
+    border: 0;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.todolist-card{
+    border-radius: 10px;
+    border: 1px solid#d8d8d8;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.todolist-card:hover{
+    box-shadow: 5px 6px 6px 6px #e9ecef;
+    transform: scale(1.005);
+}
+
+.login-form{
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: white !important;
+}

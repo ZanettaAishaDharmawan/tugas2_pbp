@@ -1,49 +1,44 @@
-<div>
-    <div class="header">
-        <h1>Hello {{username}} !</h1>
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ToDo List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <div class="container" style="margin-top:30px;"></div>
+        <div class="header" style="text-align: center;">
+            <h1>Hello {{username}} !</h1>
+        </div>
+        <div class="mb-3" style="margin: 40px;">
+            <a class="btn btn-primary btn-lg btn-block" href='/todolist/create-task' role="button" style="margin-bottom:10px; display: block; background-color: #63AAFF; border: #63AAFF; max-width: 100%;">Create Task</a>
+            <a href="{% url 'todolist:logout' %}" class="btn btn-lg btn-block" style="margin-bottom:10px; display: block; background-color: #ff6363; border: #ff6363; color: white; max-width: 100%;">Logout</a>
+          </div>
+        <div>
+          {% for todo in list_todo %}
+            <div class="todolist-card" style="margin: 30px; ">
+              <div class="card-header">
+                {% if todo.is_finished %}
+                  Finished
+                {% else %}
+                  Not Finished
+                {% endif%}
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">{{todo.title}}</h4>
+                <p class="card-subtitle mb-2 text-muted">Made {{todo.date}}</p>
+                <p><h5 class="card-text">{{todo.description}}</h5> </p>
+                <a href="{% url 'todolist:change-task' todo.id %}" class="btn btn-success" style="margin-bottom:10px;display: block;">Change Status</a>
+                <a href="{% url 'todolist:delete-task' todo.id %}" class="btn btn-outline-danger" style="margin-bottom:10px; display: block;">Delete</a>
+              </div>
+            </div>
+          {% endfor %} 
+          </div>
+        </div>    
     </div>
+  </body>
 
-    <table border="1"
-            bgcolor="#d6eaf8">
-        <tr>
-          <th>Date</th>
-          <th>Task</th>
-          <th>Desctiption</th>
-          <th>Status</th>
-          <th>Change Status</th>
-          <th>Delete</th>
-          <th></th>
-        </tr>
-        {% comment %} Add the data below this line {% endcomment %}
-        {% for todo in list_todo %}
-        <tr>
-            <th>{{todo.date}}</th>
-            <th>{{todo.title}}</th>
-            <th>{{todo.description}}</th>
-            <th>
-              {% if todo.is_finished %}
-              Selesai
-              {% else %}
-              Belum Selesai
-              {% endif%}
-            </th>
-            <th>
-                <button><a href="{% url 'todolist:change-task' todo.id %}" title="">Change Status</a></button>
-            </th>
-            <th>
-                <style>
-                    .button {
-                        color:red;
-                    }
-                </style>
-                <a href="{% url 'todolist:delete-task' todo.id %}" title="" class="button">Delete</a>
-            </th>
-        </tr>
-        {% endfor %}
-      </table>
-    
-    <th>
-    <button onclick="location.href='/todolist/create-task'">Create New Task</button>
-    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-    </th>
-</div>
