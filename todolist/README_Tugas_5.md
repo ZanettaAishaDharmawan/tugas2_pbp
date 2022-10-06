@@ -2,6 +2,7 @@
 Link heroku: https://tugas2-pbp-zanet.herokuapp.com/todolist/login/
 ## Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
 **Inline CSS**
+
 Inline CSS digunakan untuk tag HTML tertentu. Style dapat ditambahkan pada setiap tag. Cara ini kurang direkomendasikan dan mempersulit web developer. Inline CSS berguna jika ingin mengubah 1 style component saja. 
 Kelebihan inline CSS:
 - Berfungsi jika ingin menguji dan melihat perubahan
@@ -13,6 +14,7 @@ Kekurangan inline CSS:
 - Penerapan membutuhkan waktu yang lebih lama 
 
 **Internal CSS**
+
 Kode CSS internal diletakkan di dalam bagian <head> pada halaman. Class dan ID bisa digunakan untuk merujuk pada kode CSS, namun hanya akan aktif pada halaman tersebut
 Kelebihan internal CSS:
 - Perubahan hanya terjadi pada 1 halaman
@@ -25,6 +27,7 @@ Kekurangan internal css:
 - kurang efisien jika ingin menerapkan style pada satu file
   
 **External CSS**
+
 External CSS adalah kode CSS yang ditulis terpisah dari kode HTML. External CSS ditulis di sebuah file khusus menggunakan ekstensi .css.
 Kelebihan external CSS:
 - Ukuran file HTML menjadi lebih kecil dan strukturnya lebih rapi
@@ -55,7 +58,6 @@ Kekurangan external css:
 <!doctype html>
 <html lang="en">
   <head>
-    <title>ToDo List</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
