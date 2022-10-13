@@ -12,6 +12,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
+from django.http.response import JsonResponse, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -67,7 +69,8 @@ def create_task(request):
         description = request.POST.get('description')
         user = request.user
         is_finished = False
-        Task.objects.create (date=date, title=title, description=description, user=user, is_finished=is_finished)
+        obj = Task.objects.create (date=date, title=title, description=description, user=user, is_finished=is_finished)
+        obj.save()
         response = HttpResponseRedirect(reverse("todolist:show_todolist"))
     return render(request, 'tambah.html')
 
@@ -80,3 +83,25 @@ def change_task(request, pk):
     data.is_finished = not(data.is_finished)
     data.save()
     return redirect('todolist:show_todolist')
+
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    task = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', task), content_type='application/json')
+
+def add_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.datetime.now()
+        user = request.user
+        is_finished = False
+        item = Task(title=title, description=description, date=date, user=user, is_finished=is_finished)
+        item.save()
+    return JsonResponse({"instance": "Proyek Dibuat"},status=200)
+
+@csrf_exempt    
+def delete(request, pk):
+    if request.method == 'DELETE':
+        Task.objects.filter(id=pk).delete()
+    return JsonResponse({"instance": "Proyek Dihapus"},status=200)

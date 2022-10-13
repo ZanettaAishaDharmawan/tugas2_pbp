@@ -23,15 +23,19 @@ html, body {
 }
 
 .todolist-card{
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid#d8d8d8;
     transition: all 0.2s ease;
     cursor: pointer;
+    overflow-y: auto;
 }
 
+
 .todolist-card:hover{
+    flex-wrap: wrap;
     box-shadow: 5px 6px 6px 6px #e9ecef;
     transform: scale(1.005);
+    overflow-y: auto;
 }
 
 .login-form{
