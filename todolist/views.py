@@ -27,7 +27,6 @@ def show_todolist(request):
 
 def register(request):
     form = UserCreationForm()
-
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         username = request.POST.get('username')
